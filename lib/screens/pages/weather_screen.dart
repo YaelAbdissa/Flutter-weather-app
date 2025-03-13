@@ -5,6 +5,7 @@ import '../../extensions/date_time.dart';
 import '../../constants/text_styles.dart';
 import '../../providers/current_weather_provider.dart';
 import '../../widgets/gradient_container.dart';
+import '../../widgets/hourly_forcast_widget.dart';
 import '../../widgets/weather_info.dart';
 import '../../constants/app_colors.dart';
 
@@ -72,7 +73,9 @@ class WeatherScreen extends ConsumerWidget {
                     ),
                   ),
                 ],
-              )
+              ),
+              SizedBox(height: 15),
+              HourlyForcastWidget(),
             ],
           )
         ],
