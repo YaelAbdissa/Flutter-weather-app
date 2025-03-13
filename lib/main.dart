@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'screens/home_screen.dart';
+
 void main() {
   runApp(ProviderScope(child: const MyApp()));
 }
@@ -17,6 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
+      home: const HomeScreen(),
     );
   }
 }
