@@ -6,6 +6,7 @@ import 'package:weather_app/utils/get_weather_icons.dart';
 
 import '../models/famous_city.dart';
 import '../providers/get_weather_by_city_provider.dart';
+import '../screens/weather_detail_screen.dart';
 
 class FamousCityWidget extends StatelessWidget {
   const FamousCityWidget({super.key});
@@ -22,9 +23,20 @@ class FamousCityWidget extends StatelessWidget {
         shrinkWrap: true,
         itemCount: famousCities.length,
         itemBuilder: (context, index) {
-          return FamousCityTile(
-            cityName: famousCities[index].name,
-            index: index,
+          return InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>
+                      WeatherDetailScreen(cityName: famousCities[index].name),
+                ),
+              );
+            },
+            child: FamousCityTile(
+              cityName: famousCities[index].name,
+              index: index,
+            ),
           );
         },
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
