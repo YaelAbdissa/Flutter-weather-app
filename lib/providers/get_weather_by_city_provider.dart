@@ -3,7 +3,7 @@ import 'package:weather_app/models/weather.dart';
 
 import '../services/api_helper.dart';
 
-final cweatherByCityNameProvider =
+final getweatherByCityNameProvider =
     FutureProvider.family<Weather, String>((ref, String cityName) async {
   return ApiHelper.getWeatherByCityName(cityName: cityName);
 });

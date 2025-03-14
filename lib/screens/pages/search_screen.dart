@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constants/text_styles.dart';
+import '../../widgets/famous_city_widget.dart';
 import '../../widgets/gradient_container.dart';
 import '../../widgets/round_text_field_widget.dart';
 
@@ -54,9 +55,12 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                 ),
                 SizedBox(width: 10),
-                LocationIcon()
+                LocationIcon(),
               ],
             ),
+            SizedBox(height: 30),
+            FamousCityWidget(),
+            SizedBox(height: 10),
           ],
         ),
       ],
