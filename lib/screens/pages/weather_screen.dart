@@ -18,12 +18,13 @@ class WeatherScreen extends ConsumerWidget {
     return weatherData.when(data: (weather) {
       return GradientContainer(
         children: [
-          SizedBox(
-            width: double.infinity,
-          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(
+                width: double.infinity,
+                height: 30,
+              ),
               Text(
                 weather.name,
                 style: TextStyles.h1,
@@ -82,7 +83,10 @@ class WeatherScreen extends ConsumerWidget {
       );
     }, error: (error, stacktrace) {
       return Center(
-        child: Text('Error: $error'),
+        child: Text(
+          'Error: $error /\n StackTrace: $stacktrace',
+          style: TextStyles.h2,
+        ),
       );
     }, loading: () {
       return Center(

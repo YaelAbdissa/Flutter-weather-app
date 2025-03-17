@@ -31,12 +31,13 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     return GradientContainer(
       children: [
-        SizedBox(
-          width: double.infinity,
-        ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            SizedBox(
+              width: double.infinity,
+              height: 30,
+            ),
             Text(
               "Pick Location",
               style: TextStyles.h1,

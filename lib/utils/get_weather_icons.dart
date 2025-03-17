@@ -1,7 +1,7 @@
 String getWeatherIcon({
   required int weatherCode,
 }) {
-  String weatherCondition = '01d';
+  String weatherCondition = 'assets/icons/01d.png';
 
   if (weatherCode == 801) {
     weatherCondition = 'assets/icons/02d.png';

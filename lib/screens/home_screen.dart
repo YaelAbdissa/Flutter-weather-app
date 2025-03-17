@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../constants/app_colors.dart';
 import '../constants/navigation_destination.dart';
+import 'pages/forecast_screen.dart';
 import 'pages/search_screen.dart';
 import 'pages/weather_screen.dart';
 
@@ -18,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final screens = [
     WeatherScreen(),
     SearchScreen(),
-    Container(color: Colors.blue),
+    ForecastScreen(),
     Container(color: Colors.yellow),
   ];
   @override

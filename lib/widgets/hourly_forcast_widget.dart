@@ -35,7 +35,10 @@ class HourlyForcastWidget extends ConsumerWidget {
       },
       error: (error, sTrace) {
         return Center(
-          child: Text('Error: $error, StackTrace: $sTrace'),
+          child: Text(
+            'Error: $error, StackTrace: $sTrace',
+            style: TextStyles.h2,
+          ),
         );
       },
       loading: () {

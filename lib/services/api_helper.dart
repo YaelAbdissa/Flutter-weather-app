@@ -11,7 +11,7 @@ import '../utils/logging.dart';
 class ApiHelper {
   static const String baseUrl = 'https://api.openweathermap.org/data/2.5/';
   static const String weeklyWeatherUrl =
-      "https://api.open-meteo.com/v1/forecast?latitude=37.7749&longitude=-122.4194&daily=5&timezone=auto";
+      "https://api.open-meteo.com/v1/forecast?current=&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto";
 
   static double lat = 0.0;
   static double lon = 0.0;
@@ -55,6 +55,7 @@ class ApiHelper {
   static Future<WeeklyWeather> getWeeklyForecast() async {
     await fetchLocation();
     final url = _constructWeeklyForecastUrl();
+    print(url);
     final response = await _fetchData(url);
     return WeeklyWeather.fromJson(response);
   }

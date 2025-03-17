@@ -52,7 +52,7 @@ class GradientContainer extends StatelessWidget {
           ),
         ),
         padding: const EdgeInsets.only(
-          top: 36.0,
+          // top: 36.0,
           left: 24.0,
           right: 24.0,
         ),
