@@ -1,6 +1,6 @@
 # 🌤️ Weather App 
 
-A simple weather app that fetches data from .[OpenWeatherMapApi](https://openweathermap.org/api) and .[Open-meteo Weather API](https://open-meteo.com/).
+A simple weather app that fetches data from [OpenWeatherMapApi](https://openweathermap.org/api) and [Open-meteo Weather API](https://open-meteo.com/).
 
 ## 📸 Screenshots 
 
